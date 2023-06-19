@@ -11,6 +11,7 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>    
+    <UseCommonOutputDirectory>false</UseCommonOutputDirectory>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +29,7 @@
 	  <PackageReference Include="Microsoft.Build.Tasks.Core" PrivateAssets="all" ExcludeAssets="Runtime">
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageVersion Include="System.Threading.Tasks.Dataflow" Version="7.0.0" />
   </ItemGroup>
 
   <Target Name="IncludeReferenceCopyLocalPathsInBuildOutputInPackage" BeforeTargets="_GetBuildOutputFilesWithTfm" DependsOnTargets="ResolveReferences;ResolvePackageDependenciesForBuild">
